@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Auto Care</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <main class="auth-layout">
+
+        <section class="auth-visual">
+            <a href="index.html" class="brand brand-light">
+                <span class="brand-mark">A</span>
+                <span>Auto Care</span>
+            </a>
+
+            <div class="auth-visual-content">
+                <span class="auth-tag">YOUR JOURNEY, OUR CARE</span>
+                <h1>Welcome Back to Auto Care.</h1>
+                <p>
+                    Keep your vehicle in great condition with convenient
+                    service bookings and automotive essentials.
+                </p>
+
+                <img
+                    src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85"
+                    alt="Car ready for the road"
+                    onerror="this.style.display='none';">
+                
+                <div class="auth-benefit">
+                    <span>✓</span>
+                    <p>Manage your vehicle care in one place.</p>
+                </div>
+            </div>
+
+            <p class="auth-visual-footer">Reliable care for every journey.</p>
+        </section>
+
+        <section class="auth-form-wrap">
+            <a href="index.html" class="auth-back">← Back to Home</a>
+
+            <div class="auth-form-content">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h2>Sign In</h2>
+                <p class="auth-description">
+                    Enter your account details to continue.
+                </p>
+
+                <form class="auth-form demo-form"
+                      data-redirect="dashboard.html"
+                      data-success="Signed in for this frontend demo.">
+
+                    <div class="field">
+                        <label for="loginEmail">Email Address</label>
+                        <input
+                            id="loginEmail"
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <div class="password-label-row">
+                            <label for="loginPassword">Password</label>
+                            <a href="forgot-password.html">Forgot password?</a>
+                        </div>
+                        <input
+                            id="loginPassword"
+                            type="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+                    </div>
+
+                    <label class="auth-checkbox">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+
+                    <button type="submit" class="btn btn-full">
+                        Sign In
+                    </button>
+
+                    <p class="form-message" aria-live="polite"></p>
+                </form>
+
+                <div class="auth-separator">
+                    <span>NEW TO AUTO CARE?</span>
+                </div>
+
+                <p class="auth-switch">
+                    Don't have an account?
+                    <a href="signup.html">Create an account</a>
+                </p>
+
+                <p class="auth-demo-note">
+                    Frontend demo only. Real authentication is not enabled.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Auto Care</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <main class="auth-layout auth-signup-layout">
+
+        <section class="auth-visual signup-visual">
+            <a href="index.html" class="brand brand-light">
+                <span class="brand-mark">A</span>
+                <span>Auto Care</span>
+            </a>
+
+            <div class="auth-visual-content">
+                <span class="auth-tag">JOIN AUTO CARE</span>
+                <h1>Better Care Starts Here.</h1>
+                <p>
+                    Create your account to organise your vehicle details,
+                    explore products, and manage service bookings.
+                </p>
+
+                <img
+                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85"
+                    alt="Sports car ready for a journey"
+                    onerror="this.style.display='none';">
+
+                <div class="auth-benefit">
+                    <span>✓</span>
+                    <p>One convenient place for your car-care needs.</p>
+                </div>
+            </div>
+
+            <p class="auth-visual-footer">Welcome to the Auto Care community.</p>
+        </section>
+
+        <section class="auth-form-wrap auth-signup-form-wrap">
+            <a href="index.html" class="auth-back">← Back to Home</a>
+
+            <div class="auth-form-content">
+                <p class="eyebrow">GET STARTED</p>
+                <h2>Create Account</h2>
+                <p class="auth-description">
+                    Fill in your details to create a demo account.
+                </p>
+
+                <form class="auth-form demo-form"
+                      data-redirect="dashboard.html"
+                      data-success="Your demo account has been created.">
+
+                    <div class="field">
+                        <label for="signupName">Full Name</label>
+                        <input
+                            id="signupName"
+                            type="text"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <label for="signupEmail">Email Address</label>
+                        <input
+                            id="signupEmail"
+                            type="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <label for="signupPhone">Phone Number</label>
+                        <input
+                            id="signupPhone"
+                            type="tel"
+                            name="phone"
+                            pattern="[0-9+() -]{8,16}"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <label for="signupPassword">Password</label>
+                        <input
+                            id="signupPassword"
+                            type="password"
+                            name="password"
+                            minlength="6"
+                            placeholder="Minimum 6 characters"
+                            autocomplete="new-password"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <label for="signupConfirm">Confirm Password</label>
+                        <input
+                            id="signupConfirm"
+                            type="password"
+                            name="confirmPassword"
+                            minlength="6"
+                            placeholder="Enter your password again"
+                            autocomplete="new-password"
+                            required>
+                    </div>
+
+                    <label class="auth-checkbox auth-terms">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the terms and privacy policy.</span>
+                    </label>
+
+                    <button type="submit" class="btn btn-full">
+                        Create Account
+                    </button>
+
+                    <p class="form-message" aria-live="polite"></p>
+                </form>
+
+                <div class="auth-separator">
+                    <span>ALREADY A MEMBER?</span>
+                </div>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </p>
+
+                <p class="auth-demo-note">
+                    Frontend demo only. Account details are not saved to a server.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

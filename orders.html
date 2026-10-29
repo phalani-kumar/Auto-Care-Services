@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your Auto Care automotive parts orders and delivery status.">
+  <title>My Orders | Auto Care</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+  <aside class="dashboard-sidebar" id="dashboardSidebar">
+    <a href="index.html" class="brand">🚘 Auto Care</a>
+    <p class="sidebar-label">CUSTOMER MENU</p>
+
+    <nav class="dashboard-nav" aria-label="Customer navigation">
+      <a href="dashboard.html">▦ <span>Dashboard</span></a>
+      <a href="vehicles.html">🚘 <span>My Vehicles</span></a>
+      <a href="book-service.html">＋ <span>Book Service</span></a>
+      <a href="bookings.html">▣ <span>My Bookings</span></a>
+      <a href="service-history.html">◷ <span>Service History</span></a>
+      <a href="orders.html" class="active" aria-current="page">🛍 <span>Orders</span></a>
+      <a href="settings.html">⚙ <span>Settings</span></a>
+    </nav>
+
+    <a href="index.html" class="sidebar-logout">↪ <span>Back to Website</span></a>
+  </aside>
+
+  <main class="dashboard-main">
+
+    <header class="dashboard-topbar">
+      <button class="menu-toggle" id="dashboardMenuToggle"
+        aria-label="Open dashboard menu" aria-expanded="false">☰</button>
+
+      <div>
+        <p class="topbar-label">Customer Portal</p>
+        <h2>My Orders</h2>
+      </div>
+
+      
+      <div class="user-chip">
+          <span class="avatar" id="userAvatar">GU</span>
+          <div>
+              <strong id="loggedInUserName">Guest</strong>
+              <small>Customer Account</small>
+          </div>
+      </div>
+
+    </header>
+
+    <section class="dashboard-content">
+
+      <div class="welcome-banner">
+        <div>
+          <p class="eyebrow">YOUR PURCHASES</p>
+          <h1>My Orders</h1>
+          <p>Track your automotive parts, check delivery statuses, and review your purchases.</p>
+        </div>
+        <a href="shop.html" class="btn btn-primary">Shop Parts →</a>
+      </div>
+
+      <div class="dashboard-stat-grid">
+        <article class="stat-card">
+          <span class="stat-icon">🛍️</span>
+          <p>Total Orders</p>
+          <h2>5 Orders</h2>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">🚚</span>
+          <p>In Transit</p>
+          <h2>1 Order</h2>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">✓</span>
+          <p>Delivered</p>
+          <h2>3 Orders</h2>
+        </article>
+      </div>
+
+      <section class="dashboard-card">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">PURCHASE OVERVIEW</p>
+            <h2>Order History</h2>
+          </div>
+
+          <select id="orderStatusFilter" aria-label="Filter orders by status">
+            <option value="all">All Orders</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Shipped">Shipped</option>
+            <option value="Processing">Processing</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Product</th>
+                <th>Order Date</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody id="orderRows">
+              <tr data-status="Delivered">
+                <td>#ORD1005</td>
+                <td>Brake Pads (Set)</td>
+                <td>22 Oct 2026</td>
+                <td>₹2,499</td>
+                <td><span class="status-badge status-green">Delivered</span></td>
+              </tr>
+
+              <tr data-status="Shipped">
+                <td>#ORD1004</td>
+                <td>Premium Engine Oil</td>
+                <td>24 Oct 2026</td>
+                <td>₹1,499</td>
+                <td><span class="status-badge status-blue">Shipped</span></td>
+              </tr>
+
+              <tr data-status="Delivered">
+                <td>#ORD1003</td>
+                <td>Air Filter</td>
+                <td>10 Oct 2026</td>
+                <td>₹799</td>
+                <td><span class="status-badge status-green">Delivered</span></td>
+              </tr>
+
+              <tr data-status="Processing">
+                <td>#ORD1002</td>
+                <td>Car Battery</td>
+                <td>26 Oct 2026</td>
+                <td>₹5,499</td>
+                <td><span class="status-badge status-orange">Processing</span></td>
+              </tr>
+
+              <tr data-status="Delivered">
+                <td>#ORD1001</td>
+                <td>Premium Floor Mats</td>
+                <td>02 Oct 2026</td>
+                <td>₹1,299</td>
+                <td><span class="status-badge status-green">Delivered</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p id="ordersEmpty" class="empty-state" hidden>
+          No orders found for this status.
+        </p>
+      </section>
+
+      <p class="demo-note">
+        Orders, prices, and delivery statuses are sample data. Purchases are not processed.
+      </p>
+
+    </section>
+  </main>
+
+</body>
+</html>

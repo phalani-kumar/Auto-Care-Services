@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vehicles | Auto Care</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <a href="index.html" class="dashboard-brand">
+            <span class="dashboard-brand-mark">A</span>
+            <span>Auto Care</span>
+        </a>
+
+        <p class="sidebar-label">CUSTOMER MENU</p>
+
+        <nav class="dashboard-nav">
+            <a href="dashboard.html"><span class="nav-icon">▦</span> Dashboard</a>
+            <a href="vehicles.html" class="active"><span class="nav-icon">🚘</span> My Vehicles</a>
+            <a href="book-service.html"><span class="nav-icon">＋</span> Book Service</a>
+            <a href="bookings.html"><span class="nav-icon">▣</span> My Bookings</a>
+            <a href="service-history.html"><span class="nav-icon">◷</span> Service History</a>
+            <a href="orders.html"><span class="nav-icon">🛍</span> My Orders</a>
+            <a href="settings.html"><span class="nav-icon">⚙</span> Settings</a>
+        </nav>
+
+        <a href="index.html" class="sidebar-logout">
+            <span class="nav-icon">↗</span> Back to Website
+        </a>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-topbar">
+            <button class="dashboard-menu-toggle" id="dashboardMenuToggle"
+                    aria-label="Toggle dashboard menu" aria-expanded="false">☰</button>
+
+            <div class="topbar-title">
+                <p class="topbar-label">CUSTOMER PORTAL</p>
+                <h2>My Vehicles</h2>
+            </div>
+
+            
+            <div class="user-chip">
+                <span class="avatar" id="userAvatar">GU</span>
+                <div>
+                    <strong id="loggedInUserName">Guest</strong>
+                    <small>Customer Account</small>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="welcome-banner">
+                <div>
+                    <p class="eyebrow">YOUR GARAGE</p>
+                    <h1>My Vehicles</h1>
+                    <p>Manage your vehicles and keep track of their service needs.</p>
+                </div>
+                <button class="btn btn-primary" id="showVehicleForm" type="button">
+                    ＋ Add Vehicle
+                </button>
+            </div>
+
+            <form class="dashboard-card vehicle-form demo-form"
+                  id="vehicleForm" hidden
+                  data-success="Vehicle added to this demo page.">
+
+                <div class="dashboard-card-heading">
+                    <div>
+                        <p class="eyebrow">VEHICLE DETAILS</p>
+                        <h2>Add a Vehicle</h2>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="vehicleMake">Vehicle Make</label>
+                        <input id="vehicleMake" name="make" placeholder="e.g. BMW" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="vehicleModel">Vehicle Model</label>
+                        <input id="vehicleModel" name="model" placeholder="e.g. M340i" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="vehicleReg">Registration Number</label>
+                        <input id="vehicleReg" name="registration"
+                               placeholder="e.g. TN 10 AB 1234" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="vehicleYear">Manufacturing Year</label>
+                        <input id="vehicleYear" name="year" type="number"
+                               min="1980" max="2035" placeholder="2024" required>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button class="btn btn-primary" type="submit">Save Vehicle</button>
+                    <button class="btn btn-outline" id="cancelVehicleForm" type="button">
+                        Cancel
+                    </button>
+                </div>
+
+                <p class="form-message" aria-live="polite"></p>
+            </form>
+
+            <div class="vehicle-page-heading">
+                <div>
+                    <h2>Vehicles in Your Garage</h2>
+                    <p>View your registered vehicles and their next service dates.</p>
+                </div>
+                <span class="vehicle-count">2 Vehicles</span>
+            </div>
+
+            <div class="vehicle-grid">
+
+                <article class="dashboard-card vehicle-card">
+                    <div class="vehicle-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1000&q=80"
+                             alt="BMW M340i">
+                        <span class="vehicle-image-badge">Primary Vehicle</span>
+                    </div>
+
+                    <div class="vehicle-card-content">
+                        <div class="vehicle-card-heading">
+                            <div>
+                                <p class="eyebrow">BMW</p>
+                                <h2>BMW M340i</h2>
+                            </div>
+                            <span class="status-badge status-green">Active</span>
+                        </div>
+
+                        <p class="vehicle-registration">TN 10 AB 1234</p>
+
+                        <div class="vehicle-specs">
+                            <span><strong>Year</strong> 2023</span>
+                            <span><strong>Fuel</strong> Petrol</span>
+                        </div>
+
+                        <div class="vehicle-next-service">
+                            <span>Next scheduled service</span>
+                            <strong>31 Oct 2026</strong>
+                        </div>
+
+                        <div class="button-row">
+                            <a href="book-service.html" class="btn btn-primary">Book Service</a>
+                            <a href="service-history.html" class="btn btn-outline">Service History</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dashboard-card vehicle-card">
+                    <div class="vehicle-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80"
+                             alt="Porsche 911">
+                        <span class="vehicle-image-badge secondary-badge">Second Vehicle</span>
+                    </div>
+
+                    <div class="vehicle-card-content">
+                        <div class="vehicle-card-heading">
+                            <div>
+                                <p class="eyebrow">PORSCHE</p>
+                                <h2>Porsche 911</h2>
+                            </div>
+                            <span class="status-badge status-green">Active</span>
+                        </div>
+
+                        <p class="vehicle-registration">TN 10 CD 5678</p>
+
+                        <div class="vehicle-specs">
+                            <span><strong>Year</strong> 2022</span>
+                            <span><strong>Fuel</strong> Petrol</span>
+                        </div>
+
+                        <div class="vehicle-next-service">
+                            <span>Next scheduled service</span>
+                            <strong>12 Nov 2026</strong>
+                        </div>
+
+                        <div class="button-row">
+                            <a href="book-service.html" class="btn btn-primary">Book Service</a>
+                            <a href="service-history.html" class="btn btn-outline">Service History</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="dashboard-demo-note">
+                Vehicle details shown here are sample data. This frontend demo does not save
+                vehicles to a database.
+            </p>
+
+        </section>
+    </main>
+
+</body>
+</html>

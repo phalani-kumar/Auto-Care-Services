@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service | Auto Care</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <a href="index.html" class="dashboard-brand">
+            <span class="dashboard-brand-mark">A</span>
+            <span>Auto Care</span>
+        </a>
+
+        <p class="sidebar-label">CUSTOMER MENU</p>
+
+        <nav class="dashboard-nav">
+            <a href="dashboard.html"><span class="nav-icon">▦</span> Dashboard</a>
+            <a href="vehicles.html"><span class="nav-icon">🚘</span> My Vehicles</a>
+            <a href="book-service.html" class="active"><span class="nav-icon">＋</span> Book Service</a>
+            <a href="bookings.html"><span class="nav-icon">▣</span> My Bookings</a>
+            <a href="service-history.html"><span class="nav-icon">◷</span> Service History</a>
+            <a href="orders.html"><span class="nav-icon">🛍</span> My Orders</a>
+            <a href="settings.html"><span class="nav-icon">⚙</span> Settings</a>
+        </nav>
+
+        <a href="index.html" class="sidebar-logout">
+            <span class="nav-icon">↗</span> Back to Website
+        </a>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-topbar">
+            <button class="dashboard-menu-toggle" id="dashboardMenuToggle"
+                    aria-label="Toggle dashboard menu" aria-expanded="false">☰</button>
+
+            <div class="topbar-title">
+                <p class="topbar-label">CUSTOMER PORTAL</p>
+                <h2>Book a Service</h2>
+            </div>
+
+            
+            <div class="user-chip">
+                <span class="avatar" id="userAvatar">GU</span>
+                <div>
+                    <strong id="loggedInUserName">Guest</strong>
+                    <small>Customer Account</small>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="welcome-banner">
+                <div>
+                    <p class="eyebrow">SERVICE APPOINTMENT</p>
+                    <h1>Book Your Service</h1>
+                    <p>Give your vehicle the care it deserves. Choose your service and preferred appointment.</p>
+                </div>
+            </div>
+
+            <div class="booking-layout">
+
+                <form class="dashboard-card booking-form demo-form"
+                      id="customerBookingForm"
+                      data-success="Your demo service request has been submitted. No booking was sent to a server.">
+
+                    <div class="dashboard-card-heading">
+                        <div>
+                            <p class="eyebrow">APPOINTMENT REQUEST</p>
+                            <h2>Service Details</h2>
+                            <p class="section-description">Enter your preferences to request an appointment.</p>
+                        </div>
+                        <span class="booking-step-number">01</span>
+                    </div>
+
+                    <div class="field">
+                        <label for="bookingVehicle">Select Your Vehicle</label>
+                        <select id="bookingVehicle" name="vehicle" required>
+                            <option value="">Choose your vehicle</option>
+                            <option>BMW M340i — TN 10 AB 1234</option>
+                            <option>Porsche 911 — TN 10 CD 5678</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="bookingService">Select a Service</label>
+                        <select id="bookingService" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option>Oil Change &amp; General Checkup</option>
+                            <option>Engine Diagnostics</option>
+                            <option>Brake Inspection</option>
+                            <option>Tyre &amp; Wheel Care</option>
+                            <option>Car Detailing</option>
+                            <option>Battery Check</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="bookingDate">Preferred Date</label>
+                            <input id="bookingDate" type="date" name="date"
+                                   min="2026-10-29" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="bookingTime">Preferred Time</label>
+                            <select id="bookingTime" name="time" required>
+                                <option value="">Select a time</option>
+                                <option>09:00 AM</option>
+                                <option>10:30 AM</option>
+                                <option>12:00 PM</option>
+                                <option>02:00 PM</option>
+                                <option>04:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="bookingLocation">Service Centre</label>
+                        <select id="bookingLocation" name="location" required>
+                            <option value="">Select a service centre</option>
+                            <option>Auto Care Service Centre — Hyderabad</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="bookingNotes">Additional Notes <span class="optional-label">(Optional)</span></label>
+                        <textarea id="bookingNotes" name="notes" rows="4"
+                                  placeholder="Describe any concerns about your vehicle..."></textarea>
+                    </div>
+
+                    <div class="booking-form-footer">
+                        <p>Your details are used only for this frontend demonstration.</p>
+                        <button class="btn btn-primary btn-full" type="submit">
+                            Request Appointment →
+                        </button>
+                    </div>
+
+                    <p class="form-message" aria-live="polite"></p>
+                </form>
+
+                <aside class="booking-side-column">
+
+                    <section class="dashboard-card booking-summary">
+                        <div class="booking-summary-icon">🛠</div>
+                        <p class="eyebrow">A SMOOTHER SERVICE</p>
+                        <h2>Before You Book</h2>
+
+                        <ul class="booking-check-list">
+                            <li><span>✓</span><div><strong>Choose your vehicle</strong><p>Select the vehicle that needs attention.</p></div></li>
+                            <li><span>✓</span><div><strong>Select a service</strong><p>Pick the maintenance or inspection you need.</p></div></li>
+                            <li><span>✓</span><div><strong>Choose a time</strong><p>Select a convenient date and appointment slot.</p></div></li>
+                            <li><span>✓</span><div><strong>Arrive on time</strong><p>Reach the service centre a few minutes early.</p></div></li>
+                        </ul>
+                    </section>
+
+                    <section class="dashboard-card booking-help-card">
+                        <p class="eyebrow">NEED ASSISTANCE?</p>
+                        <h2>We're Here to Help</h2>
+                        <p>Have a question about a service or appointment? Contact our team.</p>
+                        <a href="contact.html" class="btn btn-outline btn-full">Contact Us →</a>
+                    </section>
+
+                </aside>
+            </div>
+
+            <p class="dashboard-demo-note">
+                This is a frontend-only demo. Submitting the form displays a confirmation message;
+                it does not create a real appointment or contact a server.
+            </p>
+
+        </section>
+    </main>
+
+</body>
+</html>

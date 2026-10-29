@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your Auto Care customer profile, security, and notification preferences.">
+  <title>Account Settings | Auto Care</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+  <aside class="dashboard-sidebar" id="dashboardSidebar">
+    <a href="index.html" class="brand">🚘 Auto Care</a>
+    <p class="sidebar-label">CUSTOMER MENU</p>
+
+    <nav class="dashboard-nav" aria-label="Customer navigation">
+      <a href="dashboard.html">▦ <span>Dashboard</span></a>
+      <a href="vehicles.html">🚘 <span>My Vehicles</span></a>
+      <a href="book-service.html">＋ <span>Book Service</span></a>
+      <a href="bookings.html">▣ <span>My Bookings</span></a>
+      <a href="service-history.html">◷ <span>Service History</span></a>
+      <a href="orders.html">🛍 <span>Orders</span></a>
+      <a href="settings.html" class="active" aria-current="page">⚙ <span>Settings</span></a>
+    </nav>
+
+    <a href="index.html" class="sidebar-logout">↪ <span>Back to Website</span></a>
+  </aside>
+
+  <main class="dashboard-main">
+
+    <header class="dashboard-topbar">
+      <button class="menu-toggle" id="dashboardMenuToggle"
+        aria-label="Open dashboard menu" aria-expanded="false">☰</button>
+
+      <div>
+        <p class="topbar-label">Customer Portal</p>
+        <h2>Account Settings</h2>
+      </div>
+
+      
+      <div class="user-chip">
+          <span class="avatar" id="userAvatar">GU</span>
+          <div>
+              <strong id="loggedInUserName">Guest</strong>
+              <small>Customer Account</small>
+          </div>
+      </div>
+
+    </header>
+
+    <section class="dashboard-content">
+
+      <div class="welcome-banner">
+        <div>
+          <p class="eyebrow">ACCOUNT MANAGEMENT</p>
+          <h1>Account Settings</h1>
+          <p>Manage your personal information, password, and notification preferences.</p>
+        </div>
+      </div>
+
+      <div class="settings-layout">
+
+        <section class="dashboard-card">
+          <p class="eyebrow">YOUR PROFILE</p>
+          <h2>Personal Information</h2>
+          <p>Keep your contact details up to date.</p>
+
+          <form class="demo-form" data-success="Your profile changes were submitted in this demo.">
+            <div class="form-grid">
+              <div>
+                <label for="settingsName">Full Name</label>
+                <input id="settingsName" name="name" type="text"
+                  autocomplete="name" required>
+              </div>
+
+              <div>
+                <label for="settingsEmail">Email Address</label>
+                <input id="settingsEmail" name="email" type="email"
+                  autocomplete="email" required>
+              </div>
+
+              <div>
+                <label for="settingsPhone">Phone Number</label>
+                <input id="settingsPhone" name="phone" type="tel"
+                  autocomplete="tel" required>
+              </div>
+
+              <div>
+                <label for="settingsCity">City</label>
+                <input id="settingsCity" name="city" type="text"
+                  autocomplete="address-level2">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="dashboard-card">
+          <p class="eyebrow">ACCOUNT SECURITY</p>
+          <h2>Change Password</h2>
+          <p>Use a new password to update your account security.</p>
+
+          <form class="demo-form"
+            data-success="Password change was demonstrated only. Your password has not been changed.">
+
+            <label for="currentPassword">Current Password</label>
+            <input id="currentPassword" type="password"
+              name="currentPassword" autocomplete="current-password"
+              placeholder="Enter current password" required>
+
+            <label for="newPassword">New Password</label>
+            <input id="newPassword" type="password"
+              name="newPassword" autocomplete="new-password"
+              minlength="6" placeholder="Enter new password" required>
+
+            <label for="confirmNewPassword">Confirm New Password</label>
+            <input id="confirmNewPassword" type="password"
+              name="confirmPassword" autocomplete="new-password"
+              minlength="6" placeholder="Re-enter new password" required>
+
+            <button type="submit" class="btn btn-primary">Update Password</button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="dashboard-card">
+          <p class="eyebrow">YOUR PREFERENCES</p>
+          <h2>Notifications</h2>
+          <p>Choose which updates you would like to receive.</p>
+
+          <form class="demo-form"
+            data-success="Your notification preferences were submitted in this demo.">
+
+            <label class="checkbox-label">
+              <input type="checkbox" name="serviceReminders" checked>
+              Service reminders
+            </label>
+
+            <label class="checkbox-label">
+              <input type="checkbox" name="orderUpdates" checked>
+              Order and delivery updates
+            </label>
+
+            <label class="checkbox-label">
+              <input type="checkbox" name="offers">
+              Special offers and promotions
+            </label>
+
+            <button type="submit" class="btn btn-primary">Save Preferences</button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </section>
+
+      </div>
+
+      <p class="demo-note">
+        This is a frontend demonstration. Profile details, password changes, and notification preferences are not saved to a server.
+      </p>
+
+    </section>
+  </main>
+
+</body>
+</html>

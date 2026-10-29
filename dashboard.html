@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard | Auto Care</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <a href="index.html" class="dashboard-brand">
+            <span class="dashboard-brand-mark">A</span>
+            <span>Auto Care</span>
+        </a>
+
+        <p class="sidebar-label">CUSTOMER MENU</p>
+
+        <nav class="dashboard-nav">
+            <a href="dashboard.html" class="active"><span class="nav-icon">▦</span> Dashboard</a>
+            <a href="vehicles.html"><span class="nav-icon">🚘</span> My Vehicles</a>
+            <a href="book-service.html"><span class="nav-icon">＋</span> Book Service</a>
+            <a href="bookings.html"><span class="nav-icon">▣</span> My Bookings</a>
+            <a href="service-history.html"><span class="nav-icon">◷</span> Service History</a>
+            <a href="orders.html"><span class="nav-icon">🛍</span> My Orders</a>
+            <a href="settings.html"><span class="nav-icon">⚙</span> Settings</a>
+        </nav>
+
+        <a href="index.html" class="sidebar-logout">
+            <span class="nav-icon">↗</span> Back to Website
+        </a>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-topbar">
+            <button class="dashboard-menu-toggle" id="dashboardMenuToggle"
+                    aria-label="Toggle dashboard menu" aria-expanded="false">☰</button>
+
+            <div class="topbar-title">
+                <p class="topbar-label">CUSTOMER PORTAL</p>
+                <h2>My Dashboard</h2>
+            </div>
+
+            
+            <div class="user-chip">
+                <span class="avatar" id="userAvatar">GU</span>
+                <div>
+                    <strong id="loggedInUserName">Guest</strong>
+                    <small>Customer Account</small>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="welcome-banner">
+                <div>
+                    <p class="eyebrow">YOUR AUTO CARE ACCOUNT</p>
+                    <h1>Welcome back, <span id="welcomeUserName">Guest</span>!</h1>
+                    <p>Keep track of your vehicles, appointments, and recent orders in one place.</p>
+                </div>
+                <a href="book-service.html" class="btn btn-primary">＋ Book a Service</a>
+            </div>
+
+            <div class="dashboard-stat-grid">
+                <article class="dashboard-stat-card">
+                    <div class="dashboard-stat-icon blue-icon">🚘</div>
+                    <p>My Vehicles</p>
+                    <h3>02</h3>
+                    <a href="vehicles.html">Manage vehicles <span>→</span></a>
+                </article>
+
+                <article class="dashboard-stat-card">
+                    <div class="dashboard-stat-icon orange-icon">🗓</div>
+                    <p>Upcoming Service</p>
+                    <h3>3 Days</h3>
+                    <a href="bookings.html">View appointments <span>→</span></a>
+                </article>
+
+                <article class="dashboard-stat-card">
+                    <div class="dashboard-stat-icon green-icon">🛍</div>
+                    <p>Total Orders</p>
+                    <h3>05</h3>
+                    <a href="orders.html">Track your orders <span>→</span></a>
+                </article>
+
+                <article class="dashboard-stat-card">
+                    <div class="dashboard-stat-icon purple-icon">🛠</div>
+                    <p>Service Records</p>
+                    <h3>08</h3>
+                    <a href="service-history.html">View service history <span>→</span></a>
+                </article>
+            </div>
+
+            <div class="dashboard-two-column">
+
+                <section class="dashboard-card">
+                    <div class="dashboard-card-heading">
+                        <div>
+                            <p class="eyebrow">YOUR GARAGE</p>
+                            <h2>My Vehicles</h2>
+                        </div>
+                        <a href="vehicles.html" class="text-link">View all →</a>
+                    </div>
+
+                    <article class="vehicle-mini-card">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=700&q=80"
+                             alt="BMW M340i">
+                        <div class="vehicle-mini-details">
+                            <h3>BMW M340i</h3>
+                            <p>TN 10 AB 1234</p>
+                            <span class="status-badge status-blue">Primary Vehicle</span>
+                        </div>
+                        <a href="vehicles.html" class="text-link">Details</a>
+                    </article>
+
+                    <article class="vehicle-mini-card">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80"
+                             alt="Porsche 911">
+                        <div class="vehicle-mini-details">
+                            <h3>Porsche 911</h3>
+                            <p>TN 10 CD 5678</p>
+                            <span class="status-badge">Second Vehicle</span>
+                        </div>
+                        <a href="vehicles.html" class="text-link">Details</a>
+                    </article>
+                </section>
+
+                <section class="dashboard-card">
+                    <div class="dashboard-card-heading">
+                        <div>
+                            <p class="eyebrow">DON'T MISS IT</p>
+                            <h2>Upcoming Service</h2>
+                        </div>
+                        <span class="status-badge status-orange">Upcoming</span>
+                    </div>
+
+                    <div class="upcoming-service">
+                        <div class="calendar-tile">
+                            <strong>31</strong>
+                            <span>OCT</span>
+                        </div>
+                        <div class="upcoming-service-details">
+                            <h3>Oil Change &amp; General Checkup</h3>
+                            <p>BMW M340i · TN 10 AB 1234</p>
+                            <p>10:30 AM</p>
+                            <p>Auto Care Service Centre</p>
+                        </div>
+                    </div>
+
+                    <a href="bookings.html" class="btn btn-outline btn-full">
+                        View Booking Details
+                    </a>
+                </section>
+            </div>
+
+            <section class="dashboard-card dashboard-recent-orders">
+                <div class="dashboard-card-heading">
+                    <div>
+                        <p class="eyebrow">YOUR RECENT ACTIVITY</p>
+                        <h2>Recent Orders</h2>
+                    </div>
+                    <a href="orders.html" class="text-link">View all orders →</a>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Product</th>
+                                <th>Order Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD1005</td>
+                                <td>Brake Pads (Set)</td>
+                                <td>22 Oct 2026</td>
+                                <td><span class="status-badge status-green">Delivered</span></td>
+                                <td><a href="orders.html" class="text-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD1004</td>
+                                <td>Premium Engine Oil</td>
+                                <td>15 Oct 2026</td>
+                                <td><span class="status-badge status-blue">Shipped</span></td>
+                                <td><a href="orders.html" class="text-link">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="dashboard-demo-note">Dashboard information is sample data for this frontend demonstration.</p>
+            </section>
+
+        </section>
+    </main>
+
+</body>
+</html>
